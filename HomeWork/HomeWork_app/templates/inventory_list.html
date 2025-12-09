@@ -1,0 +1,18 @@
+<table border="1">
+<tr>
+    <th>Продукт</th>
+    <th>Склад</th>
+    <th>Кількість</th>
+    <th>Min Required</th>
+    <th>Last Restock</th>
+</tr>
+{% for r in records %}
+<tr>
+    <td>{{ r.product.name }}</td>
+    <td>{{ r.warehouse.title }}</td>
+    <td>{{ r.quantity }}</td>
+    <td>{{ r.min_required }}</td>
+    <td>{{ r.last_restock }}</td>
+</tr>
+{% endfor %}
+</table>
