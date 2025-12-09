@@ -1,5 +1,5 @@
 """
-WSGI config for homework project.
+WSGI config for HomeWork_2_5 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'homework.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'HomeWork_2_5.settings')
 
 application = get_wsgi_application()
