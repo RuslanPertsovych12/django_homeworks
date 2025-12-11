@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Список ресурсів</h2>
+
+{% for r in items %}
+    <p>
+        <a href="/resources/{{ r.id }}/">{{ r.title }}</a>
+    </p>
+{% endfor %}
+
+<div>
+    {% if items.has_previous %}
+        <a href="?page={{ items.previous_page_number }}">Назад</a>
+    {% endif %}
+
+    {{ items.number }} / {{ items.paginator.num_pages }}
+
+    {% if items.has_next %}
+        <a href="?page={{ items.next_page_number }}">Вперед</a>
+    {% endif %}
+</div>
+
+{% endblock %}
